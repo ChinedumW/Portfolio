@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Pro - Transform Your Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #FF6B6B;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .scroll-hidden::-webkit-scrollbar { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary">Home</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary">Classes</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary">Membership</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary">Trainers</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary">Schedule</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <span class="hidden md:flex items-center text-gray-600">
+                        <i class="ri-phone-line mr-2"></i>
+                        +1 (555) 123-4567
+                    </span>
+                    <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+                        Join Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/062399b27f90154a1871f0cbb4b38200.jpg')">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl font-bold text-white mb-6">Transform Your Body, Transform Your Life</h1>
+                    <p class="text-xl text-white/90 mb-8">Join our premium fitness community and experience world-class training with expert guidance. Start your fitness journey today.</p>
+                    <div class="flex space-x-4">
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+                            Start Free Trial
+                        </button>
+                        <button class="bg-white text-gray-900 px-8 py-3 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap cursor-pointer">
+                            View Classes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Featured Programs</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-heart-pulse-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">HIIT Training</h3>
+                        <p class="text-gray-600 mb-4">High-intensity interval training designed to burn fat and build endurance.</p>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium cursor-pointer">Learn More →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-boxing-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Strength Training</h3>
+                        <p class="text-gray-600 mb-4">Build muscle and increase strength with our comprehensive weight training program.</p>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium cursor-pointer">Learn More →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-mental-health-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Yoga & Wellness</h3>
+                        <p class="text-gray-600 mb-4">Find balance and flexibility through our mindful yoga and wellness classes.</p>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium cursor-pointer">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Meet Our Expert Trainers</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/929b87ddd7c6d31b17b4e1aeba7fb8c1.jpg" class="w-full h-full object-cover" alt="Trainer">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Michael Anderson</h3>
+                        <p class="text-gray-600 mb-3">HIIT Specialist</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-facebook-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/7e86d9d7720ae1b81996a72e375f27f7.jpg" class="w-full h-full object-cover" alt="Trainer">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+                        <p class="text-gray-600 mb-3">Yoga Instructor</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-facebook-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/62560ce66619361da9cd6fd4f73b9ecb.jpg" class="w-full h-full object-cover" alt="Trainer">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">David Martinez</h3>
+                        <p class="text-gray-600 mb-3">Strength Coach</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-facebook-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/5e7922ba3ba3f9bc1588ba26998b8949.jpg" class="w-full h-full object-cover" alt="Trainer">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Emily Wilson</h3>
+                        <p class="text-gray-600 mb-3">Cardio Specialist</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-facebook-line"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary cursor-pointer">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Membership Plans</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-semibold mb-4">Basic</h3>
+                        <div class="text-4xl font-bold mb-6">$49<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Access to gym facilities
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Basic fitness assessment
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                2 group classes per week
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gray-100 text-gray-800 py-3 !rounded-button hover:bg-gray-200 transition-colors whitespace-nowrap cursor-pointer">
+                            Choose Plan
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-8 relative border-2 border-primary">
+                        <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm !rounded-button transform translate-y-[-50%]">
+                            Most Popular
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Premium</h3>
+                        <div class="text-4xl font-bold mb-6">$89<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                All Basic features
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Unlimited group classes
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Personal training session
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Nutrition consultation
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+                            Choose Plan
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-semibold mb-4">Elite</h3>
+                        <div class="text-4xl font-bold mb-6">$129<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                All Premium features
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                4 PT sessions per month
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Monthly body composition
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                VIP locker room access
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gray-100 text-gray-800 py-3 !rounded-button hover:bg-gray-200 transition-colors whitespace-nowrap cursor-pointer">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Success Stories</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://public.readdy.ai/ai/img_res/85a4d8584a08a15cc84ef76418801775.jpg" class="w-full h-full object-cover" alt="Client">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Robert Thompson</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Lost 30 pounds in 6 months! The trainers here are amazing and the community is so supportive. Best decision I've ever made."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://public.readdy.ai/ai/img_res/6605a30d8a3ec21b39bd10b32d9fcc53.jpg" class="w-full h-full object-cover" alt="Client">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Jennifer Parker</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"The yoga classes have transformed not just my body but my mind as well. I feel stronger and more centered than ever."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://public.readdy.ai/ai/img_res/b6484a0a39d82f86f77ce5538954c6b8.jpg" class="w-full h-full object-cover" alt="Client">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Marcus Chen</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"From a beginner to competing in my first fitness competition - the trainers here made it possible. Incredible expertise and support."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Ready to Start Your Fitness Journey?</h2>
+                        <p class="text-gray-600 mb-8">Join our community of fitness enthusiasts and transform your life with expert guidance and support. Sign up now and get your first week free!</p>
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+                            Get Started Today
+                        </button>
+                    </div>
+                    <div class="relative h-96 rounded-lg overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/41891c0674e96b7476847e9898e4367d.jpg" class="w-full h-full object-cover" alt="Gym Environment">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>
+                    <p class="text-gray-400">Transform your life through fitness with our world-class facilities and expert trainers.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Classes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Schedule</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            123 Fitness Street, NY 10001
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            info@fitlifepro.com
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 FitLife Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

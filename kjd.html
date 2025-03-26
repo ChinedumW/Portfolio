@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men's Collection - Modern Fashion Store</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#4F46E5',
+secondary: '#3B82F6'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.search-input:focus {
+outline: none;
+box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+.product-card:hover {
+transform: translateY(-4px);
+transition: all 0.3s ease;
+}
+.cart-counter {
+position: absolute;
+top: -8px;
+right: -8px;
+min-width: 20px;
+height: 20px;
+padding: 0 6px;
+border-radius: 10px;
+background: #3B82F6;
+color: white;
+font-size: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+input[type="range"] {
+-webkit-appearance: none;
+width: 100%;
+height: 4px;
+background: #e5e7eb;
+border-radius: 2px;
+outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 16px;
+height: 16px;
+background: #4F46E5;
+border-radius: 50%;
+cursor: pointer;
+}
+.color-swatch {
+width: 24px;
+height: 24px;
+border-radius: 50%;
+cursor: pointer;
+border: 2px solid transparent;
+}
+.color-swatch.selected {
+border-color: #4F46E5;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<header class="bg-white shadow-sm fixed w-full z-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<a href="/" class="font-['Pacifico'] text-2xl text-primary">logo</a>
+</div>
+<div class="flex-1 max-w-2xl mx-8">
+<div class="relative">
+<input type="text" placeholder="Search for products..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-full text-sm search-input">
+<div class="absolute left-3 top-0 h-full flex items-center">
+<i class="ri-search-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative cursor-pointer">
+<i class="ri-shopping-cart-line text-xl"></i>
+<span class="cart-counter">3</span>
+</div>
+<div class="cursor-pointer">
+<i class="ri-user-line text-xl"></i>
+</div>
+</div>
+</div>
+<nav class="flex space-x-8 py-4">
+<a href="ecoommerce.html" class="text-gray-600 hover:text-primary">Home</a>
+<a href="women.html">Women</a>
+<a href="kjd.html" class="text-primary font-medium">Men</a>
+
+</nav>
+</div>
+</header>
+<main class="pt-32">
+<div class="max-w-7xl mx-auto px-4 flex gap-8">
+<aside class="w-72 flex-shrink-0">
+<div class="bg-white rounded-lg p-6 shadow-sm sticky top-32">
+<div class="mb-6">
+<h3 class="font-semibold mb-4">Categories</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-primary font-medium">All Men's</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Suits</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Shirts</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Pants</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Jackets</a></li>
+<li><a href="https://readdy.ai/home/1b9e992a-a5b9-4aec-a12d-c9466086de29/0f7b00cf-b4c4-4c52-94fd-105dc1d289e7" data-readdy="true" class="text-gray-600 hover:text-primary">Accessories</a></li>
+</ul>
+</div>
+<div class="mb-6">
+<h3 class="font-semibold mb-4">Size</h3>
+<div class="space-y-2">
+<label class="flex items-center">
+<input type="checkbox" class="text-primary rounded">
+<span class="ml-2 text-gray-600">XS</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="text-primary rounded">
+<span class="ml-2 text-gray-600">S</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="text-primary rounded">
+<span class="ml-2 text-gray-600">M</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="text-primary rounded">
+<span class="ml-2 text-gray-600">L</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="text-primary rounded">
+<span class="ml-2 text-gray-600">XL</span>
+</label>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="font-semibold mb-4">Color</h3>
+<div class="flex flex-wrap gap-2">
+<div class="color-swatch bg-black"></div>
+<div class="color-swatch bg-white border-2 border-gray-200"></div>
+<div class="color-swatch bg-blue-500"></div>
+<div class="color-swatch bg-gray-500"></div>
+<div class="color-swatch bg-brown-500"></div>
+<div class="color-swatch bg-green-500"></div>
+<div class="color-swatch bg-navy-500"></div>
+<div class="color-swatch bg-beige-500"></div>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="font-semibold mb-4">Price Range</h3>
+<input type="range" min="0" max="1000" value="500" class="mb-4">
+<div class="flex justify-between text-sm text-gray-600">
+<span>$0</span>
+<span>$1000</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Apply Filters
+</button>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-2xl font-bold">Men's Collection</h1>
+<div class="flex items-center space-x-4">
+<select class="border border-gray-200 rounded-button px-4 py-2 text-sm cursor-pointer">
+<option>Sort by: Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest First</option>
+</select>
+<div class="flex border border-gray-200 rounded-button">
+<button class="px-3 py-2 text-primary bg-primary/5">
+<i class="ri-layout-grid-line"></i>
+</button>
+<button class="px-3 py-2 text-gray-400 hover:text-primary">
+<i class="ri-list-check-2"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="product-card bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/1f900c8099bada572491f532d006f151.jpg" alt="Product" class="w-full h-80 object-cover">
+<button class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-heart-line text-gray-400 hover:text-primary"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-2">Business Suit</h3>
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-medium">$599.99</span>
+<div class="flex space-x-1">
+<div class="w-4 h-4 rounded-full bg-black border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-gray-500 border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-blue-900 border-2 border-transparent cursor-pointer"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Add to Cart
+</button>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/1f65d48cf863b974261af8c4f0cba5c9.jpg" alt="Product" class="w-full h-80 object-cover">
+<button class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-heart-line text-gray-400 hover:text-primary"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-2">Oxford Dress Shirt</h3>
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-medium">$89.99</span>
+<div class="flex space-x-1">
+<div class="w-4 h-4 rounded-full bg-white border-2 border-gray-200 cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-blue-500 border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-pink-500 border-2 border-transparent cursor-pointer"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Add to Cart
+</button>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/5d7af617be5256ba216c41036e21661c.jpg" alt="Product" class="w-full h-80 object-cover">
+<button class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-heart-line text-gray-400 hover:text-primary"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-2">Tailored Trousers</h3>
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-medium">$129.99</span>
+<div class="flex space-x-1">
+<div class="w-4 h-4 rounded-full bg-gray-800 border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-beige-500 border-2 border-transparent cursor-pointer"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Add to Cart
+</button>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/caec45d522e1d541361bf9af626f26bb.jpg" alt="Product" class="w-full h-80 object-cover">
+<button class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-heart-line text-gray-400 hover:text-primary"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-2">Leather Jacket</h3>
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-medium">$299.99</span>
+<div class="flex space-x-1">
+<div class="w-4 h-4 rounded-full bg-brown-500 border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-black border-2 border-transparent cursor-pointer"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Add to Cart
+</button>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/bbf2bd3c9bb9efc85b265f50b3762b19.jpg" alt="Product" class="w-full h-80 object-cover">
+<button class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-heart-line text-gray-400 hover:text-primary"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-2">Casual Blazer</h3>
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-medium">$199.99</span>
+<div class="flex space-x-1">
+<div class="w-4 h-4 rounded-full bg-navy-500 border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-gray-500 border-2 border-transparent cursor-pointer"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Add to Cart
+</button>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/c39d50d49f699e04520d00ee2d88da28.jpg" alt="Product" class="w-full h-80 object-cover">
+<button class="absolute top-4 right-4 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-heart-line text-gray-400 hover:text-primary"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-2">Merino Wool Sweater</h3>
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-medium">$149.99</span>
+<div class="flex space-x-1">
+<div class="w-4 h-4 rounded-full bg-green-500 border-2 border-transparent cursor-pointer"></div>
+<div class="w-4 h-4 rounded-full bg-blue-500 border-2 border-transparent cursor-pointer"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors cursor-pointer">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-8">
+<span class="text-gray-600">Showing 1-6 of 24 products</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100">4</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white border-t mt-16">
+<div class="max-w-7xl mx-auto px-4 py-12">
+<div class="grid grid-cols-4 gap-8">
+<div>
+<h4 class="font-semibold mb-4">About Us</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-600 hover:text-primary">Our Story</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Careers</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Press</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Customer Service</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-600 hover:text-primary">Contact Us</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Shipping & Returns</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-600 hover:text-primary">
+<i class="ri-instagram-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-600 hover:text-primary">
+<i class="ri-facebook-line text-xl"></i>
+</a>
+<a href="#" class="text-gray-600 hover:text-primary">
+<i class="ri-twitter-line text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Payment Methods</h4>
+<div class="flex space-x-4">
+<i class="ri-visa-fill text-2xl text-gray-600"></i>
+<i class="ri-mastercard-fill text-2xl text-gray-600"></i>
+<i class="ri-paypal-fill text-2xl text-gray-600"></i>
+</div>
+</div>
+</div>
+<div class="border-t mt-12 pt-8 text-center text-gray-600">
+<p>&copy; 2025 logo. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+const colorSwatches = document.querySelectorAll('.color-swatch');
+colorSwatches.forEach(swatch => {
+swatch.addEventListener('click', () => {
+colorSwatches.forEach(s => s.classList.remove('selected'));
+swatch.classList.add('selected');
+});
+});
+const wishlistButtons = document.querySelectorAll('.ri-heart-line');
+wishlistButtons.forEach(button => {
+button.addEventListener('click', (e) => {
+e.preventDefault();
+button.classList.toggle('text-primary');
+});
+});
+const gridViewButton = document.querySelector('.ri-layout-grid-line').parentElement;
+const listViewButton = document.querySelector('.ri-list-check-2').parentElement;
+gridViewButton.addEventListener('click', () => {
+gridViewButton.classList.add('text-primary', 'bg-primary/5');
+listViewButton.classList.remove('text-primary', 'bg-primary/5');
+});
+listViewButton.addEventListener('click', () => {
+listViewButton.classList.add('text-primary', 'bg-primary/5');
+gridViewButton.classList.remove('text-primary', 'bg-primary/5');
+});
+const addToCartButtons = document.querySelectorAll('button:contains("Add to Cart")');
+addToCartButtons.forEach(button => {
+button.addEventListener('click', () => {
+const notification = document.createElement('div');
+notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+notification.textContent = 'Product added to cart!';
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+});
+</script>
+</body>
+</html>
