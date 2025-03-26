@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisdom - Web Designer CV</title>
+  <style>
+    /* Simple, clean styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .cv-container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    /* Header */
+    .header {
+      padding: 40px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 300;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Main content */
+    .content {
+      padding: 30px 40px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    /* About */
+    .about {
+      margin-bottom: 25px;
+    }
+
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background-color: #f5f5f5;
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 0.85rem;
+    }
+
+    /* Experience and Education */
+    .timeline-item {
+      margin-bottom: 20px;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .item-title {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .item-period {
+      color: #888;
+      font-size: 0.85rem;
+    }
+
+    .item-subtitle {
+      color: #666;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+
+    .item-description {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Portfolio */
+    .portfolio-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .portfolio-item {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 3px;
+      text-align: center;
+    }
+
+    .portfolio-title {
+      font-weight: 500;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+
+    .portfolio-desc {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Download button */
+    .download-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .download-btn:hover {
+      background-color: #1a252f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .cv-container {
+        margin: 15px;
+      }
+      
+      .header, .content {
+        padding: 20px;
+      }
+      
+      .timeline-header {
+        flex-direction: column;
+        gap: 2px;
+      }
+      
+      .portfolio-items {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .download-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media print {
+      .download-btn {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Download Button -->
+  <button class="download-btn" id="downloadBtn">
+    <i class="fas fa-download"></i> Download CV
+  </button>
+
+  <div class="cv-container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">Wisdom Chinedum</h1>
+      <h2 class="title">Web Designer</h2>
+      <div class="contact">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>wisdom.design@example.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+234 801 234 5678</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Lagos, Nigeria</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <span>portfolio.wisdom.design</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- About -->
+      <section class="about">
+        <p>Creative web designer with a keen eye for aesthetics and user experience. Born and raised in Lagos, Nigeria, with formal education from NIIT University. Passionate about creating visually appealing and functional websites that deliver exceptional user experiences.</p>
+      </section>
+
+      <!-- Skills -->
+      <section class="section">
+        <h3 class="section-title">Design Skills</h3>
+        <div class="skills-list">
+          <span class="skill">UI/UX Design</span>
+          <span class="skill">Responsive Design</span>
+          <span class="skill">Wireframing</span>
+          <span class="skill">Prototyping</span>
+          <span class="skill">Adobe XD</span>
+          <span class="skill">Figma</span>
+          <span class="skill">Photoshop</span>
+          <span class="skill">Illustrator</span>
+          <span class="skill">HTML/CSS</span>
+          <span class="skill">WordPress</span>
+          <span class="skill">Color Theory</span>
+          <span class="skill">Typography</span>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section">
+        <h3 class="section-title">Experience</h3>
+        
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="item-title">Senior Web Designer</div>
+            <div class="item-period">2021 - Present</div>
+          </div>
+          <div class="item-subtitle">Creative Solutions, Lagos</div>
+          <div class="item-description">
+            Lead designer for corporate websites and e-commerce platforms. Create wireframes, mockups, and prototypes. Collaborate with clients to deliver visually stunning and user-friendly designs.
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="item-title">UI/UX Designer</div>
+            <div class="item-period">2019 - 2021</div>
+          </div>
+          <div class="item-subtitle">Digital Creatives, Lagos</div>
+          <div class="item-description">
+            Designed user interfaces for web and mobile applications. Conducted user research and created user personas. Improved website usability and visual appeal for various clients.
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <h3 class="section-title">Education</h3>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div class="item-title">Bachelor of Design</div>
+            <div class="item-period">2015 - 2019</div>
+          </div>
+          <div class="item-subtitle">NIIT University, Neemrana, India</div>
+          <div class="item-description">
+            Specialized in Digital Design with focus on web and interactive media. Graduated with honors.
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Highlights -->
+      <section class="section">
+        <h3 class="section-title">Portfolio Highlights</h3>
+        <div class="portfolio-items">
+          <div class="portfolio-item">
+            <div class="portfolio-title">Luxury Fashion Brand</div>
+            <div class="portfolio-desc">E-commerce website redesign with 40% improved conversion rate</div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-title">Banking App UI</div>
+            <div class="portfolio-desc">Modern interface design for a leading Nigerian bank</div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-title">Travel Blog</div>
+            <div class="portfolio-desc">Custom WordPress theme with unique visual identity</div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-title">Restaurant Chain</div>
+            <div class="portfolio-desc">Responsive website with online ordering system</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section">
+        <h3 class="section-title">Certifications</h3>
+        <div class="timeline-item">
+          <div class="item-title">UI/UX Design Professional</div>
+          <div class="item-subtitle">Google, 2020</div>
+        </div>
+        <div class="timeline-item">
+          <div class="item-title">Web Design Mastery</div>
+          <div class="item-subtitle">NIIT, 2019</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Download functionality
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Get the HTML content
+      const htmlContent = document.documentElement.outerHTML;
+      
+      // Create a Blob with the HTML content
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      
+      // Create a download link
+      const downloadLink = document.createElement('a');
+      downloadLink.href = URL.createObjectURL(blob);
+      downloadLink.download = 'wisdom-cv.html';
+      
+      // Append to the document, click it, and remove it
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    });
+  </script>
+</body>
+</html>
