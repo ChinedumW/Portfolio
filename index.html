@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wisdom | Full Stack Developer</title>
+    <title>Wisdom | Web Developer</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <!-- Header -->
@@ -19,15 +19,15 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li>
-              <!-- From Uiverse.io by andrew-demchenk0 -->
-              <label class="switch">
-                <input type="checkbox" class="toggle" id="theme-toggle" />
-                <span class="slider"></span>
-                <span class="card-side"></span>
-              </label>
-            </li>
           </ul>
+          <!-- Theme toggle separated from nav-links -->
+          <div class="theme-toggle-wrapper">
+            <label class="switch">
+              <input type="checkbox" class="toggle" id="theme-toggle" />
+              <span class="slider"></span>
+              <span class="card-side"></span>
+            </label>
+          </div>
           <button class="mobile-menu-btn" aria-label="Toggle menu">
             <div class="hamburger">
               <span></span>
@@ -41,22 +41,18 @@
 
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
-      <button class="mobile-nav-close" aria-label="Close menu">
-        <span></span>
-      </button>
+      <div class="mobile-nav-header">
+        <button class="mobile-nav-close" aria-label="Close menu">
+          <span></span>
+        </button>
+      
+      </div>
       <ul class="mobile-nav-links">
         <li><a href="#home" class="mobile-nav-link">Home</a></li>
         <li><a href="#about" class="mobile-nav-link">About</a></li>
         <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
         <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-        <li>
-          <label class="switch" style="margin: 1rem auto;">
-            <input type="checkbox" class="toggle mobile-theme-toggle" />
-            <span class="slider"></span>
-            <span class="card-side"></span>
-          </label>
-        </li>
       </ul>
     </div>
 
@@ -65,7 +61,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text animate slide-in-left">
-            <h1>Hi, I'm Wisdom<br />Full Stack Developer</h1>
+            <h1>Hi, I'm Wisdom<br />Web Developer</h1>
             <p>
               I build exceptional digital experiences that are fast, accessible,
               visually appealing, and responsive. Let's turn your vision into
@@ -79,7 +75,7 @@
           <div class="hero-image animate slide-in-right">
             <img
               src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
-              alt="Wisdom - Full Stack Developer"
+              alt="Wisdom - Web Developer"
               loading="lazy"
             />
           </div>
@@ -94,7 +90,7 @@
         <div class="about-content">
           <div class="about-text animate fade-in-up">
             <p>
-              Hello! I'm Wisdom, a passionate full stack developer with a keen
+              Hello! I'm Wisdom, a passionate web developer with a keen
               eye for creating elegant solutions to complex problems. With over
               5 years of experience in web development, I specialize in building
               robust applications that deliver exceptional user experiences.
@@ -119,245 +115,108 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <section class="skills-section animate fade-in-up" id="skills">
       <div class="container">
-        <h2 class="section-title animate fade-in">My Skills</h2>
-        <div class="skills-container stagger">
-          <div class="skill-category">
-            <h3>Frontend Development</h3>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-name">HTML5, CSS3, JavaScript (ES6+)</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 95%"
-                  ></div>
+        <h2 class="section-title">My Skills</h2>
+        <p class="skills-intro">
+          I specialize in creating beautiful, usable, and professional websites using best practice accessibility and the latest web standards.
+        </p>
+
+        <div class="skills-boxes-container">
+          <!-- Frontend Skills Box -->
+          <div class="skill-box animate fade-in-up" style="animation-delay: 0.2s;">
+            <div class="skill-box-header">
+              <h3>Frontend</h3>
+            </div>
+            <div class="skills-container">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-html5"></i>HTML/CSS</span>
+                  <span class="skill-percentage" data-percentage="95">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">React.js, Next.js</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="95"></div>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">TypeScript</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-js"></i>JavaScript</span>
+                  <span class="skill-percentage" data-percentage="85">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">Tailwind CSS, SASS</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="85"></div>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">Redux, Context API</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-solid fa-mobile-alt"></i>Responsive Design</span>
+                  <span class="skill-percentage" data-percentage="90">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">Responsive Web Design</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 95%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="90"></div>
                 </div>
-              </li>
-            </ul>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-solid fa-paint-brush"></i>UI/UX Design</span>
+                  <span class="skill-percentage" data-percentage="92">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="92"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="skill-category">
-            <h3>Backend Development</h3>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-name">Node.js, Express</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
+
+          <!-- Backend Skills Box -->
+          <div class="skill-box animate fade-in-up" style="animation-delay: 0.4s;">
+            <div class="skill-box-header">
+              <h3>Backend</h3>
+            </div>
+            <div class="skills-container">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-node-js"></i>Node.js</span>
+                  <span class="skill-percentage" data-percentage="80">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">Python, Django</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 80%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="80"></div>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">RESTful APIs</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 95%"
-                  ></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-php"></i>PHP</span>
+                  <span class="skill-percentage" data-percentage="75">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">GraphQL</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="75"></div>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">Authentication & Authorization</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-wordpress"></i>WordPress</span>
+                  <span class="skill-percentage" data-percentage="88">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">Serverless Architecture</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 80%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="88"></div>
                 </div>
-              </li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Database</h3>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-name">MongoDB</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-solid fa-database"></i>Database Management</span>
+                  <span class="skill-percentage" data-percentage="78">0%</span>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">PostgreSQL</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
+                <div class="progress-bar">
+                  <div class="progress skill-level-fill" data-percentage="78"></div>
                 </div>
-              </li>
-              <li>
-                <div class="skill-name">MySQL</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 80%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">Firebase</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">Redis</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 75%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">ORM (Mongoose, Sequelize)</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>DevOps & Tools</h3>
-            <ul class="skills-list">
-              <li>
-                <div class="skill-name">Git, GitHub</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 95%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">Docker, Kubernetes</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 80%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">CI/CD Pipelines</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">AWS, Vercel, Netlify</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">Testing (Jest, Cypress)</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 85%"
-                  ></div>
-                </div>
-              </li>
-              <li>
-                <div class="skill-name">Agile Methodologies</div>
-                <div class="skill-level">
-                  <div
-                    class="skill-level-fill"
-                    style="--target-width: 90%"
-                  ></div>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -367,8 +226,8 @@
     <section class="projects" id="projects">
       <div class="container">
         <h2 class="section-title animate fade-in">Featured Projects</h2>
-        <div class="projects-grid stagger">
-          <div class="project-card">
+        <div class="projects-grid">
+          <div class="project-card animate fade-in-up">
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
@@ -386,7 +245,6 @@
                 <span class="project-tag">React</span>
                 <span class="project-tag">Node.js</span>
                 <span class="project-tag">MongoDB</span>
-                <br>
                 <span class="project-tag">Stripe</span>
               </div>
               <div class="project-links">
@@ -395,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card animate fade-in-up" style="animation-delay: 0.2s;">
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
@@ -421,7 +279,7 @@
               </div>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card animate fade-in-up" style="animation-delay: 0.4s;">
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
@@ -464,23 +322,21 @@
             </p>
             <ul class="contact-methods">
               <li>
-                <div class="contact-icon">📧</div>
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                 <div>
                   <strong>Email</strong><br />
-                  <a href="mailto:Chinedumpop5@gmail.com"
-                    >Chinedumpop5@gmail.com</a
-                  >
+                  <a href="mailto:Chinedumpop5@gmail.com">Chinedumpop5@gmail.com</a>
                 </div>
               </li>
               <li>
-                <div class="contact-icon">📱</div>
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                 <div>
                   <strong>Phone</strong><br />
                   <a href="tel:09162693272">+234 09162693272</a>
                 </div>
               </li>
               <li>
-                <div class="contact-icon">📱</div>
+                <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
                 <div>
                   <strong>WhatsApp</strong><br />
                   <a style="cursor: pointer" href="https://wa.me/23409162693272"
@@ -489,7 +345,7 @@
                 </div>
               </li>
               <li>
-                <div class="contact-icon">📍</div>
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
                   <strong>Location</strong><br />
                   <span>San Francisco, CA</span>
@@ -497,7 +353,7 @@
               </li>
             </ul>
           </div>
-          <form class="contact-form animate slide-in-right">
+          <!-- <form class="contact-form animate slide-in-right" id="contactForm">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" class="form-control" required />
@@ -514,20 +370,46 @@
               <label for="message">Message</label>
               <textarea id="message" class="form-control" required></textarea>
             </div>
+            <input type="hidden" name="recipient" value="Chinedumpop5@gmail.com">
             <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
+          </form> -->
+          <form class="contact-form animate slide-in-right" action="https://formsubmit.co/Chinedumpop5@gmail.com" method="POST">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" class="form-control" required></textarea>
+  </div>
+  <!-- Redirect after submission -->
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+  <!-- Prevent spam -->
+  <input type="text" name="_honey" style="display:none">
+  <!-- Disable captcha -->
+  <input type="hidden" name="_captcha" value="false">
+  <button type="submit" class="btn">Send Message</button>
+  
+</form> 
+
     </section>
 
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="social-links">
-          <a href="#" class="social-link">GH</a>
-          <a href="#" class="social-link">LI</a>
-          <a href="#" class="social-link">TW</a>
-          <a href="#" class="social-link">IG</a>
+          <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <p>&copy; 2025 Wisdom. All rights reserved.</p>
       </div>
